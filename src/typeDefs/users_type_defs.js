@@ -15,7 +15,7 @@ const usersTypeDefs = gql `
         password: String!
     }
     
-    extend type Mutation {
+    type Mutation {
         authenticate(credentials: CredentialsInput!): Tokens!
         refreshToken(refresh: String!): Access!
     }

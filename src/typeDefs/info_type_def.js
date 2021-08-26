@@ -1,15 +1,19 @@
 const { gql } = require('apollo-server');
 
-const accountTypeDefs = gql`
+const infoTypeDefs = gql`
     type Info {
-        userId: String!
-        balance: Int
+        userId: String
+        dni: String!
+        typeDni: String
+        timeBorn: String
+        age: String
+        occupation: String
         lastChange: String
     }
     
     type Query {
-        accountByUserId(userId: String!): Info
+        infoByUserId(dni: String!): [Info]
     }
 `;
 
-module.exports = accountTypeDefs; 
+module.exports = infoTypeDefs; 
