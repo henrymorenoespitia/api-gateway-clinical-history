@@ -17,7 +17,6 @@ class HistoryAPI extends RESTDataSource {
     history = new Object(JSON.parse(JSON.stringify(history)));
     return await this.post(`/api/v1/patient/appointment/new`,history);   
   }
-
 }
 
 module.exports = HistoryAPI;
